@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "ultramenu",
+  "version": "${version}",
+  "name": "UltraMenu",
+  "description": "Внутриигровое меню: аспект рейшо, ресурспаки, позиция рук, миникарта, PvP-HUD и облегчалки.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["com.ultramenu.UltraMenuClient"] },
+  "mixins": [
+    { "config": "ultramenu.aspect.mixins.json", "environment": "client" },
+    { "config": "ultramenu.hand.mixins.json", "environment": "client" },
+    { "config": "ultramenu.zoom.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
